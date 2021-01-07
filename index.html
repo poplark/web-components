@@ -13,8 +13,32 @@
         <div style="background-color: red; min-width: 200px;min-height: 20px;"></div>
       </div>
     </div>
+    <div>
+      <slot-container>
+        <div slot='my-slot'>
+          <p>
+            我是第一个 container，这是我本身的文本或子元素。
+            正常插入模板后，前面应该有模板内的内容。
+          </p>
+        </div>
+      </slot-container>
+      <slot-container>
+        <div slot='my-slot'>
+          <p>我是第二个 container，不知道说啥好了。</p>
+        </div>
+      </slot-container>
+    </div>
+
+    <template id="my-template">
+      <div>
+        <hr/>
+        <p>这里是模板里面的元素，下面是 slot。</p>
+        <slot name="my-slot"></slot>
+      </div>
+    </template>
     <script src='autonomous.js'></script>
     <script src='builtin.js'></script>
     <script src='life-cycle.js'></script>
+    <script src='slot.js'></script>
   </body>
 </html>

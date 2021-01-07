@@ -6,8 +6,15 @@
     <div id='root'>
       <my-text text='a web component text'></my-text>
       <button is='my-button' prefix='BPrefix' suffix='BSuffix'>a button component</button>
+      <div style="display: flex">
+        <div style="background-color: green; min-width: 200px;min-height: 20px;">
+          <life-cycle></life-cycle>
+        </div>
+        <div style="background-color: red; min-width: 200px;min-height: 20px;"></div>
+      </div>
     </div>
     <script src='autonomous.js'></script>
     <script src='builtin.js'></script>
+    <script src='life-cycle.js'></script>
   </body>
 </html>
